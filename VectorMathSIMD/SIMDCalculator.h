@@ -1,6 +1,8 @@
 #ifndef  __SIMDCALCULATOR_H__
 #define __SIMDCALCULATOR_H__
 
+#include <string>
+
 namespace math {
 
 class SIMDCalculator {
@@ -11,6 +13,8 @@ public:
 
 	int Run( void );
 
+private:
+	bool IsQuitCommand( const std::string& inputString );
 };
 
 }

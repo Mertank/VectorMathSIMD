@@ -11,8 +11,6 @@ public:
 	Vector4( float x, float y, float z, float w );
 	virtual ~Vector4( void );
 
-	static Vector4 CreateFromString( const std::string& vectorString );
-
 private:
 	float m_X;
 	float m_Y;

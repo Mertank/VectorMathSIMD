@@ -31,3 +31,4 @@
 #Visual Studio Files
 */Debug
 *.db
+*.opendb

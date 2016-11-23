@@ -1,5 +1,7 @@
 #include "SIMDCalculator.h"
 
+#include <iostream>
+
 namespace math {
 /*
 ==========
@@ -30,6 +32,28 @@ SIMDCalculator::Run
 ==========
 */
 int SIMDCalculator::Run( void ) {
+	std::string inputString; //Store the line from the console
 
+	std::cout << "Welcome to the SIMD vector calculator!\nInput 'q' at anytime to quit.\n";
+
+	while ( true ) {
+		std::cout << "Enter a vector seperating the components with ','\n";
+		std::getline( std::cin, inputString );
+
+		//Check for quit command
+		if ( IsQuitCommand( inputString ) ) {
+			return 0;
+		}
+	}
+}
+/*
+==========
+SIMDCalculator::IsQuitCommand
+
+	Returns true if the given string should exit the program
+==========
+*/
+bool SIMDCalculator::IsQuitCommand( const std::string& inputString ) {
+	return inputString.length() == 1 && inputString[ 0 ] == 'q';
 }
 }

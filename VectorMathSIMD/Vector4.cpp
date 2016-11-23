@@ -20,15 +20,4 @@ Vector4::~Vector4
 Vector4::~Vector4() {
 
 }
-/*
-==========
-Vector4::CreateFromString
-
-	Creates a Vector4 from a string.
-	Returns nullptr if the string was in an invalid format
-==========
-*/
-Vector4 Vector4::CreateFromString( const std::string& vectorString ) {
-	
-}
 }
