@@ -15,6 +15,11 @@ public:
 
 private:
 	bool IsQuitCommand( const std::string& inputString );
+	bool IsValidVector( const std::string& inputString );
+
+	void ReadVectorString( std::string& targetString );
+
+	bool m_shouldExit;
 };
 
 }
