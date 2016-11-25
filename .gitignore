@@ -29,6 +29,6 @@
 *.app
 
 #Visual Studio Files
-*/Debug
+**/Debug
 *.db
 *.opendb
