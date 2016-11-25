@@ -76,7 +76,13 @@ int SIMDCalculator::Run( void ) {
 					}
 					case '+':
 					{
-						std::cout << *lhsVector << " + " << *rhsVector << " = " << std::endl;
+						std::cout << *lhsVector << " + " << *rhsVector << " = " << ( *lhsVector + *rhsVector ) << std::endl;
+						break;
+					}
+					case '-':
+					{
+						std::cout << *lhsVector << " + " << *rhsVector << " = " << ( *lhsVector - *rhsVector ) << std::endl;
+						break;
 					}
 				}
 			}
