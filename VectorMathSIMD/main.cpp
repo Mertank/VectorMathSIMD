@@ -1,10 +1,11 @@
 #include "SIMDCalculator.h"
+#include <memory>
 
 int main( char** args, int argc ) {
 	//Create calculator and run it
-	math::SIMDCalculator* calculator = new math::SIMDCalculator();
+	std::unique_ptr<math::SIMDCalculator> calculator = std::make_unique<math::SIMDCalculator>();
+	
 	int returnCode = calculator->Run();
-	delete calculator;
 
 	return returnCode;
 }

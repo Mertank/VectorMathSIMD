@@ -2,8 +2,11 @@
 #define __SIMDCALCULATOR_H__
 
 #include <string>
+#include <memory>
 
 namespace math {
+
+class Vector4;
 
 class SIMDCalculator {
 
@@ -17,7 +20,8 @@ private:
 	bool IsQuitCommand( const std::string& inputString );
 	bool IsValidVector( const std::string& inputString );
 
-	void ReadVectorString( std::string& targetString );
+	std::shared_ptr<Vector4> ReadVectorString( std::string& targetString );
+	std::shared_ptr<Vector4> CreateVectorFromString( const std::string& vectorString );
 
 	bool m_shouldExit;
 };

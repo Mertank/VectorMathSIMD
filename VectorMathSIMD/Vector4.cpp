@@ -17,7 +17,23 @@ Vector4::~Vector4
 	Vector4 destructor
 ==========
 */
-Vector4::~Vector4() {
+Vector4::~Vector4() 
+{}
+/*
+==========
+operator<<
 
+	Vector4 overload for writing to an output stream
+==========
+*/
+std::ostream& operator<<( std::ostream& os, const Vector4& vec ) {
+	os <<
+		"{ " << vec.m_X <<
+		", " << vec.m_Y <<
+		", " << vec.m_Z <<
+		", " << vec.m_W << 
+		" }";
+
+	return os;
 }
 }

@@ -2,15 +2,17 @@
 #define __VECTOR4_H__
 
 #include <string>
+#include <iostream>
 
 namespace math {
 
 class Vector4 {
 
 public:
-	Vector4( float x, float y, float z, float w );
-	virtual ~Vector4( void );
+							Vector4( float x, float y, float z, float w );
+	virtual					~Vector4( void );
 
+	friend std::ostream&	operator<<( std::ostream& os, const Vector4& vec );
 private:
 	float m_X;
 	float m_Y;
