@@ -58,6 +58,31 @@ int SIMDCalculator::Run( void ) {
 		}
 
 		std::cout << std::endl << "Right hand side vector is: " << *rhsVector << std::endl << std::endl;
+
+		while ( !m_shouldExit ) {
+			std::cout << "Enter an operator ( +, -, *, / ) or 'r' to enter new vectors:" << std::endl;
+			std::getline( std::cin, inputString );
+
+			if ( inputString.length() == 1 ) { //Only valid commands are 1 character long
+				switch ( inputString[ 0 ] ) {
+					case 'q': //Quit
+					{
+						m_shouldExit = true;
+						break;
+					}
+					case 'r': //Restart
+					{
+						break;
+					}
+					case '+':
+					{
+						std::cout << *lhsVector << " + " << *rhsVector << " = " << std::endl;
+					}
+				}
+			}
+
+			std::cout << std::endl;
+		}
 	}
 
 	return 0;
